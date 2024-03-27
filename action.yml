@@ -1,0 +1,33 @@
+name: 'Infostart-articles'
+description: 'Формирование списка последних статей Инфостарт для профиля GitHub'
+inputs:
+  profile-id: 
+    description: 'ID профиля'
+    required: true
+  readme-file:
+    description: 'Путь к Readme файлу. По умолчанию - ./README.md'
+    required: false
+    default: './README.md'
+  count: 
+    description: 'Количество выводимых статей. По умолчанию - 3'
+    required: false
+    default: '3'
+runs:
+  using: "composite"
+      steps:
+
+      - uses: actions/checkout@v3
+      - uses: otymko/setup-onescript@v1.4
+        with:
+          version: 1.9.0 
+
+      - name: Запуск скрипта
+        run: oscript ./update.os
+
+      - name: Запись изменений
+        uses: stefanzweifel/git-auto-commit-action@v5   
+        with:
+          commit_user_name: Vitaly the Alpaca (bot) 
+          commit_user_email: vitaly.the.alpaca@gmail.com
+          commit_author: Vitaly the Alpaca <vitaly.the.alpaca@gmail.com>
+          commit_message: Обновление зашифрованных данных по результатам тестов (workflow)
