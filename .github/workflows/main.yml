@@ -1,0 +1,13 @@
+name: Test
+on:
+  workflow_dispatch:
+jobs:
+  RunOneScript:
+    runs-on: ubuntu-latest 
+    permissions:
+        contents: write
+    steps:
+
+      - uses: ./action.yml
+        with:
+          profile-id: '1793672'
