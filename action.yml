@@ -21,7 +21,7 @@ runs:
       with:
         version: 1.9.0 
     - name: Запуск скрипта
-      run: oscript ${{ github.action_path }}/update.os
+      run: oscript ${{ github.action_path }}/update.os ${{ inputs.profile-id }} ${{ inputs.readme-file }} ${{ inputs.count }} 
       shell: bash
     - name: Запись изменений
       uses: stefanzweifel/git-auto-commit-action@v5   
