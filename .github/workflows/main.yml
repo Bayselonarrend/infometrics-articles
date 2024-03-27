@@ -7,7 +7,7 @@ jobs:
     permissions:
         contents: write
     steps:
-
+      - uses: actions/checkout@v3
       - uses: ./action.yml
         with:
           profile-id: '1793672'
