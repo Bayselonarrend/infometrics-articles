@@ -26,6 +26,7 @@
 
 	СоответствиеПризнаков = Новый Соответствие;
 	СоответствиеПризнаков.Вставить("<a class=""font-md"" href=""/1c/", 0);
+	СоответствиеПризнаков.Вставить("<a class=""font-md"" href=""/video/", 0);
 	СоответствиеПризнаков.Вставить("obj-rate-count-p", 0);
 	СоответствиеПризнаков.Вставить("<p style=""overflow: hidden;text-overflow: ellipsis;"" class="" public-preview-text-wrap"">", 1);
 	СоответствиеПризнаков.Вставить("/upload/iblock/", 0);
