@@ -15,6 +15,7 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v4 
     - name: OneScript
       uses: otymko/setup-onescript@v1.4
       with:
