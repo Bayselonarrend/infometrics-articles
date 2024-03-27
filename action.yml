@@ -19,10 +19,8 @@ runs:
       uses: otymko/setup-onescript@v1.4
       with:
         version: 1.9.0 
-
     - name: Запуск скрипта
       run: oscript ./update.os
-
     - name: Запись изменений
       uses: stefanzweifel/git-auto-commit-action@v5   
       with:
