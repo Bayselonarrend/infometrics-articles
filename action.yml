@@ -22,6 +22,7 @@ runs:
         version: 1.9.0 
     - name: Запуск скрипта
       run: oscript ./update.os
+      shell: bash
     - name: Запись изменений
       uses: stefanzweifel/git-auto-commit-action@v5   
       with:
