@@ -1,4 +1,7 @@
 name: 'Infostart-articles'
+branding:
+  icon: 'user'
+  color: 'blue'
 description: 'Формирование списка последних статей Инфостарт для профиля GitHub'
 inputs:
   profile-id: 
