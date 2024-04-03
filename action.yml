@@ -1,6 +1,5 @@
 name: 'Infostart-articles'
 description: 'Формирование списка последних статей Инфостарт для профиля GitHub'
-icon: 'user'
 inputs:
   profile-id: 
     description: 'ID профиля'
