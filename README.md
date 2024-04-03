@@ -34,14 +34,14 @@ jobs:
       - uses: bayselonarrend/infometrics-articles@1.0
         with:
           profile-id: '1793672'                 # ID профиля Infostart
-          count: '3'                            # Количество выводимых статей. По умолчанию - 3
+          count: '3'                            # Количество выводимых статей. По умолчанию - 3, Максимум - 10
           readme-file: './README.md'            # Путь к Readme файлу. По умолчанию - ./README.md (Регистр важен!)
 
 ```
 
 ## Пример вывода статьи в Readme
 
-> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png" width="96" align="left"> 
+> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png?a6374f47-0a23-4bb8-ad1c-e48b0a8608de" width="96" align="left"> 
 > <h4 style="color: white;"><a href="https://infostart.ru/1c/articles/2068854/">Особенности национального Workflow: Github Actions и OneScript</a></h4>
 > <small>Сегодня мы посмотрим на Github Actions - встроенный инструментарий Github для автоматизации рабочих процессов. Разберем, что это такое, зачем и причем тут OneScript.</small>  
 > <br clear="left">
