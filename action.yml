@@ -15,6 +15,38 @@ inputs:
     description: 'Количество выводимых статей. По умолчанию - 3'
     required: false
     default: '3'
+  template:
+    description: |
+      Текстовый шаблон одной статьи. Переменные: 
+          %1 - URL изображения
+          %2 - Заголовок статьи
+          %3 - Ссылка на статью
+          %4 - Число звезд
+          %5 - Описание статьи
+          %6 - Дата статьи
+          %7 - Комментарии
+          %8 - Просмотры
+
+          Шаблон по умолчанию
+
+          > <img src=""%1"" width=""96"" align=""left"">\n   
+          > <h4 style=""color: white;""><a href=""%3"">%2</a></h4>\n
+          > <small>%5</small>\n  
+          > <br clear=""left"">\n
+          > \n
+          > | :star: %4 |  :calendar: %6 |  :speech_balloon: %7 |  :eyes: %8 |\n
+          > |-|-|-|-|\n 
+          
+    required: false
+    default: |
+          > <img src=""%1"" width=""96"" align=""left"">\n   
+          > <h4 style=""color: white;""><a href=""%3"">%2</a></h4>\n
+          > <small>%5</small>\n  
+          > <br clear=""left"">\n
+          > \n
+          > | :star: %4 |  :calendar: %6 |  :speech_balloon: %7 |  :eyes: %8 |\n
+          > |-|-|-|-|\n 
+
 runs:
   using: "composite"
   steps:
