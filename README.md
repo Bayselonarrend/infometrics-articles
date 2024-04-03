@@ -40,21 +40,11 @@ jobs:
 
 ```
 
-## Пример вывода статьи в Readme со стандартным шаблоном
-
-> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png?a6374f47-0a23-4bb8-ad1c-e48b0a8608de" width="96" align="left"> 
-> <h4 style="color: white;"><a href="https://infostart.ru/1c/articles/2068854/">Особенности национального Workflow: Github Actions и OneScript</a></h4>
-> <small>Сегодня мы посмотрим на Github Actions - встроенный инструментарий Github для автоматизации рабочих процессов. Разберем, что это такое, зачем и причем тут OneScript.</small>  
-> <br clear="left">
->
-> | :star: +37 |  :calendar: 25.03.2024 |  :speech_balloon: 3 |  :eyes: 1393 |
->  |-|-|-|-|  
-
 <br>
 
-## Собственный шаблон вывода статей
+## Шаблоны вывода статей
 
-Для использования своего шаблона необходимо
+Для вывода статей используется текстовый шаблон по умолчанию, но вы можете использовать и свой. Для использования своего шаблона необходимо:
 
 1. Создать любой текстовый файл, где будет хранится шаблон. В нем могут содержаться следующие параметры:
     -  %1 - URL изображения
@@ -87,6 +77,17 @@ jobs:
           count: '3'
           template: ./tm.html # Тут - tm.html в корне репозитория
   ```
+<br>
+
+## Пример вывода статьи в Readme со стандартным шаблоном
+
+> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png?a6374f47-0a23-4bb8-ad1c-e48b0a8608de" width="96" align="left"> 
+> <h4 style="color: white;"><a href="https://infostart.ru/1c/articles/2068854/">Особенности национального Workflow: Github Actions и OneScript</a></h4>
+> <small>Сегодня мы посмотрим на Github Actions - встроенный инструментарий Github для автоматизации рабочих процессов. Разберем, что это такое, зачем и причем тут OneScript.</small>  
+> <br clear="left">
+>
+> | :star: +37 |  :calendar: 25.03.2024 |  :speech_balloon: 3 |  :eyes: 1393 |
+>  |-|-|-|-|  
 
 ## О составе проекта
 
