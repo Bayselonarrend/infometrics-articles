@@ -1,4 +1,4 @@
-# ![image](https://github.com/Bayselonarrend/infometrics-articles/assets/105596284/ef7e8987-3f98-4e2f-a9a6-1d112ff72f79) infostart-articles
+# ![image](https://github.com/Bayselonarrend/infometrics-articles/assets/105596284/ef7e8987-3f98-4e2f-a9a6-1d112ff72f79) infometrics-articles
 Автоматическое обновление списка последних статей Инфостарт для Readme профиля. Реализовано при помощи Github Actions.
 
 Это пока предрелиз - в нем могут быть баги. Он был проверен на ~20 профилей из топа Инфостарта, но все равно:<br>
