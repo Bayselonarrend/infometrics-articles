@@ -93,3 +93,7 @@ jobs:
 
 В основе данного Action лежит скрипт на OneScript - вы легко можете доработать его под свои нужды, если вам так захочется. 
 Шаблон вывода разметки для Readme тоже находится там.
+<hr><br>
+
+>![Infostart](https://github.com/Bayselonarrend/TelegramEnterprise/raw/main/infostart.svg)<br>
+>Статья на Инфостарте: [Обновляемый список последних статей Инфостарт для профиля Github](https://infostart.ru/1c/articles/2083470/)<br>
