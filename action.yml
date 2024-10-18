@@ -2,7 +2,7 @@ name: 'Infometrics-articles'
 branding:
   icon: 'user'
   color: 'blue'
-description: 'Формирование списка последних статей Инфостарт для профиля GitHub'
+description: 'Формирование списка последних публикаций Инфостарт для профиля GitHub'
 inputs:
   profile-id: 
     description: 'ID профиля'
@@ -12,7 +12,7 @@ inputs:
     required: false
     default: './README.md'
   count: 
-    description: 'Количество выводимых статей. По умолчанию - 3'
+    description: 'Количество выводимых публикаций. По умолчанию - 3'
     required: false
     default: '3'
   filter:
@@ -21,13 +21,13 @@ inputs:
     default: 'Top'
   template:
     description: |
-      Путь к шаблону статьи. Переменные: 
+      Путь к шаблону публикапции. Переменные: 
           %1 - URL изображения
-          %2 - Заголовок статьи
-          %3 - Ссылка на статью
+          %2 - Заголовок публикации
+          %3 - Ссылка на публикацию
           %4 - Число звезд
-          %5 - Описание статьи
-          %6 - Дата статьи
+          %5 - Описание публикации
+          %6 - Дата публикации
           %7 - Комментарии
           %8 - Просмотры
 
@@ -53,7 +53,7 @@ runs:
       with:
         version: 1.9.0 
     - name: Запуск скрипта
-      run: oscript ${{ github.action_path }}/update.os ${{ inputs.profile-id }} ${{ inputs.readme-file }} ${{ inputs.count }} ${{ inputs.top }} ${{ inputs.template }} 
+      run: oscript ${{ github.action_path }}/update.os ${{ inputs.profile-id }} ${{ inputs.readme-file }} ${{ inputs.count }} ${{ inputs.filter }} ${{ inputs.template }} 
       shell: bash
     - name: Запись изменений
       uses: stefanzweifel/git-auto-commit-action@v5   
@@ -61,5 +61,5 @@ runs:
         commit_user_name: Vitaly the Alpaca (bot) 
         commit_user_email: vitaly.the.alpaca@gmail.com
         commit_author: Vitaly the Alpaca <vitaly.the.alpaca@gmail.com>
-        commit_message: Обновление списка статей Инфостарт в Readme (bot)
+        commit_message: Обновление списка публицаий Инфостарт в Readme (bot)
 
