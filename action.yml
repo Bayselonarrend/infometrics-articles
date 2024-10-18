@@ -15,6 +15,10 @@ inputs:
     description: 'Количество выводимых статей. По умолчанию - 3'
     required: false
     default: '3'
+  filter:
+    description: 'Какие публикации собирать. По умолчанию - Лучшие. Варианты: Top - Лучшие, Download - Топ-загрузок, Sale - Топ-продаж, Comment - Топ-комментариев, Show - Топ-просмотров, "" - Последние'
+    required: false
+    default: 'Top'
   template:
     description: |
       Путь к шаблону статьи. Переменные: 
@@ -49,7 +53,7 @@ runs:
       with:
         version: 1.9.0 
     - name: Запуск скрипта
-      run: oscript ${{ github.action_path }}/update.os ${{ inputs.profile-id }} ${{ inputs.readme-file }} ${{ inputs.count }} ${{ inputs.template }}
+      run: oscript ${{ github.action_path }}/update.os ${{ inputs.profile-id }} ${{ inputs.readme-file }} ${{ inputs.count }} ${{ inputs.top }} ${{ inputs.template }} 
       shell: bash
     - name: Запись изменений
       uses: stefanzweifel/git-auto-commit-action@v5   
