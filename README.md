@@ -18,8 +18,6 @@
    
 2. Создать новый Action в репозитории профиля. Пример yml файла ниже
 
-## Пример yml файла
-
 ```yml
 name: Infostart
 on:
@@ -32,19 +30,30 @@ jobs:
         contents: write
     steps:
 
-      - uses: bayselonarrend/infometrics-articles@1.1
+      - uses: bayselonarrend/infometrics-articles@1.2
         with:
           profile-id: '1793672'                 # ID профиля Infostart
           count: '3'                            # Количество выводимых публикаций. Необязательно, по умолчанию - 3, Максимум - 10
           readme-file: './README.md'            # Путь к Readme файлу. Необязательно, по умолчанию - ./README.md (Регистр важен!)
-          filter: 'Top'                         # Какие публикации выводить. Необязательно, по умолчанию - лучшие. Другие варианты: Top - Лучшие, Download - Топ-загрузок, Sale - Топ-продаж, Comment - Топ-комментариев, Show - Топ-просмотров, "" - Последние
-          template: './tm.html'                 # Путь к шаблону. См. далее. Необязательно, по умолчанию - стандартный шаблон
-
 ```
+
+3. Готово, можно запустить вручную Action
 
 <br>
 
-## Шаблоны вывода публикаций
+## Пример вывода публикации в Readme
+
+> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png?a6374f47-0a23-4bb8-ad1c-e48b0a8608de" width="96" align="left"> 
+> <h4 style="color: white;"><a href="https://infostart.ru/1c/articles/2068854/">Особенности национального Workflow: Github Actions и OneScript</a></h4>
+> <small>Сегодня мы посмотрим на Github Actions - встроенный инструментарий Github для автоматизации рабочих процессов. Разберем, что это такое, зачем и причем тут OneScript.</small>  
+> <br clear="left">
+>
+> | :star: +37 |  :calendar: 25.03.2024 |  :speech_balloon: 3 |  :eyes: 1393 |
+>  |-|-|-|-|  
+
+## Дополнительные возможности
+
+### Шаблоны вывода публикаций
 
 Для вывода публикаций используется текстовый шаблон по умолчанию, но вы можете использовать и свой. Для использования своего шаблона необходимо:
 
@@ -73,23 +82,40 @@ jobs:
   2. Прописать путь к этому файлу в параметр template
   
   ```yml
-      - uses: bayselonarrend/infometrics-articles@1.1
+      - uses: bayselonarrend/infometrics-articles@1.2
         with:
           profile-id: '1793672'
           count: '3'
-          template: ./tm.html # Тут - tm.html в корне репозитория
+          readme-file: './README.md'
+          template: ./tm.html  # Тут - tm.html в корне репозитория
   ```
 <br>
 
-## Пример вывода публикации в Readme со стандартным шаблоном
 
-> <img src="https://infostart.ru/upload/iblock/e1e/e1eddd228630c7c47b98a2baa0f48430.png?a6374f47-0a23-4bb8-ad1c-e48b0a8608de" width="96" align="left"> 
-> <h4 style="color: white;"><a href="https://infostart.ru/1c/articles/2068854/">Особенности национального Workflow: Github Actions и OneScript</a></h4>
-> <small>Сегодня мы посмотрим на Github Actions - встроенный инструментарий Github для автоматизации рабочих процессов. Разберем, что это такое, зачем и причем тут OneScript.</small>  
-> <br clear="left">
->
-> | :star: +37 |  :calendar: 25.03.2024 |  :speech_balloon: 3 |  :eyes: 1393 |
->  |-|-|-|-|  
+### Фильтр публикаций
+
+По умолчанию в список публикаций выводится лучшие из профиля.
+
+Также можно использовать другие фильтры:
+
+   - 'Top' - Лучшие публикации по звездам
+   - 'Download' - Топ-загрузок
+   - 'Sale' - Топ-продаж
+   - 'Comment' - Топ-комментариев
+   - 'Show' -Топ-просмотров
+   - '' - Последние
+
+Для этого измените yml файл и параметр filter
+  ```yml
+      - uses: bayselonarrend/infometrics-articles@1.2
+        with:
+          profile-id: '1793672'
+          count: '3'
+          readme-file: './README.md' # Путь к Readme файлу. Необязательно, по умолчанию - ./README.md (Регистр важен!)
+          filter: 'Download'         # Какие публикации выводить. Необязательно, по умолчанию - лучшие. Другие варианты: Top - Лучшие, Download - Топ-загрузок, Sale - Топ-продаж, Comment - Топ-комментариев, Show - Топ-просмотров, "" - Последние
+  ```
+<br>
+
 
 ## О составе проекта
 
